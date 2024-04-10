@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+<bean id="Shape" class="edu.sejong.ex.Circle">
+	<property name="radius">
+	<value>5</value>
+	</property>
+	
+	</bean>
+	<bean id="Shape1" class="edu.sejong.ex.Triangle">
+	<property name="width">
+	<value>5</value>
+	</property>
+	<property name="height">
+	<value>4</value>
+	</property>
+	
+	</bean>
+	<bean id="Shape2" class="edu.sejong.ex.Rectangle">
+	<property name="width">
+	<value>10</value>
+	</property>
+	<property name="height">
+	<value>10</value>
+	</property>
+	
+	</bean>
+</beans>
