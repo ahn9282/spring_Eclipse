@@ -42,7 +42,7 @@ class DeptServiceImplTest {
 			 System.out.println("부서 이름 : "+
 		  deptVO.getDname()); 
 			 System.out.println("부서 번호 : "+ deptVO.getDeptno());
-		  System.out.println("부서 위치 : "+ deptVO.getIoc()); }
+		  System.out.println("부서 위치 : "+ deptVO.getLoc()); }
 		 
 		assertThat(list.size()).isEqualTo(list1.size());
 	}
@@ -54,7 +54,7 @@ class DeptServiceImplTest {
 			 System.out.println("부서 이름 : "+
 		  deptVO.getDname()); 
 			 System.out.println("부서 번호 : "+ deptVO.getDeptno());
-		  System.out.println("부서 위치 : "+ deptVO.getIoc()); }
+		  System.out.println("부서 위치 : "+ deptVO.getLoc()); }
 	}
 
 }

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import edu.sejong.ex.service.DeptService;
+import edu.sejong.ex.vo.DeptVO;
 
 @Controller
 @RequestMapping("/dept")
@@ -25,6 +26,14 @@ public class Deptcontroller {
 
 		return "/dept/list";
 	}
+	@GetMapping(value = "/lis2")
+	public String deptList(Model model) {
+		
+		System.out.println("list()..");
+		model.addAttribute("depts", deptService.deptList());
+		
+		return "/dept/list";
+	}
 
 	@GetMapping(value = "/insert")
 	public String insert() {
@@ -34,19 +43,32 @@ public class Deptcontroller {
 
 	@PostMapping(value = "/register")
 	public String register(@RequestParam("deptno") int deptno, @RequestParam("dname") String dname,
-			@RequestParam("ioc") String ioc, Model model) {
+			@RequestParam("loc") String loc, Model model) {
 		System.out.println("register()..  ");
-		deptService.insert(deptno, dname, ioc);
+		deptService.insert(deptno, dname, loc);
 
 		return "redirect:/dept/list";
 	}
 
 	@GetMapping(value = "/delete")
-	public String register(@RequestParam("deptno") int deptno, Model model) {
+	public String delete(@RequestParam("deptno") int deptno, Model model) {
 		System.out.println("delete()..  ");
 		deptService.delete(deptno);
 		return "redirect:/dept/list";
 	}
-	
-	
+	@PostMapping(value = "/register2")
+	public String register2(DeptVO dept, Model model) {
+		System.out.println("register()..  ");
+		deptService.insertDept(dept);
+
+		return "redirect:/dept/lis2";
+	}
+
+
+	@GetMapping(value = "/delete2")
+	public String delete2(DeptVO dept, Model model) {
+		System.out.println("delete()..  ");
+		deptService.deleteDept(dept);
+		return "redirect:/dept/lis2";
+	}
 }

@@ -33,9 +33,9 @@
 			<tr>
 				<td>${dept.deptno }</td>
 				<td>${dept.dname }</td>
-				<td>${dept.ioc }</td>
+				<td>${dept.loc }</td>
 				<td>
-				<a href="${pageContext.request.contextPath }/dept/delete?deptno=${dept.deptno}" class="btn btn-primary"type="submit">삭제</a>
+				<a href="${pageContext.request.contextPath }/dept/delete2?deptno=${dept.deptno}" class="btn btn-primary"type="submit">삭제</a>
 				</td>
 			</tr>
 		</c:forEach>

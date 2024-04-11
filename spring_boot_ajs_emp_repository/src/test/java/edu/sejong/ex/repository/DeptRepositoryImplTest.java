@@ -24,7 +24,7 @@ class DeptRepositoryImplTest {
 		for (DeptVO dept : deptRepository.selectList()) {
 			System.out.println("부서 이름 : "+ dept.getDname());
 			System.out.println("부서 번호 : "+ dept.getDeptno());
-			System.out.println("부서 위치 : "+ dept.getIoc());
+			System.out.println("부서 위치 : "+ dept.getLoc());
 		}
 	}
 

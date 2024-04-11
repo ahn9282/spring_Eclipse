@@ -9,10 +9,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="${pageContext.request.contextPath }/dept/register" method = "post">
+	<form action="${pageContext.request.contextPath }/dept/register2" method = "post">
 	부서 번호 : <input type="text" name="deptno"><br>
 	부서 이름 : <input type="text" name="dname"><br>
-	지역  : <input type="text" name="ioc"><br>
+	지역  : <input type="text" name="loc"><br>
 	<button type="submit">입력</button>
 	<input type="reset" value="리셋">
 	

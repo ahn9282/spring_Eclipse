@@ -6,6 +6,9 @@ import edu.sejong.ex.vo.DeptVO;
 
 public interface DeptService{
 	List<DeptVO> getList();
-	void insert(int deptno, String dname, String ioc);
+	List<DeptVO> deptList();
+	void insert(int deptno, String dname, String loc);
 	void delete(int deptno);
+	void insertDept(DeptVO deptVO);
+	void deleteDept(DeptVO deptVO);
 }
