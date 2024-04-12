@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.sejong.ex.mapper.EmpMapper">
+    <select id="empList" resultType="edu.sejong.ex.vo.EmpVO">
+    <![CDATA[
+        select * from emp
+        ]]>
+    </select>
+     <insert id="insertEmp" parameterType="edu.sejong.ex.vo.EmpVO">
+    <![CDATA[
+     insert into emp (empno, ename, job, mgr, hiredate, sal,comm,deptno) values (#{empno},#{ename},#{job},#{mgr},#{hiredate},#{sal},#{comm},#{deptno})
+        ]]>
+    </insert>
+     <delete id="deleteEmp" parameterType="edu.sejong.ex.vo.EmpVO">
+    <![CDATA[
+    delete from emp where empno = #{empno}
+        ]]>
+    </delete>
+</mapper>

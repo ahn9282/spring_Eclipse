@@ -8,9 +8,10 @@ import edu.sejong.ex.vo.EmpVO;
 import lombok.extern.slf4j.Slf4j;
 
 public interface EmpService{
-	List<EmpVO> getList();
-	void addEmp(EmpVO emp);
+List<EmpVO> empList();
 	
-	void removeEmp(EmpVO emp);
+	void insertEmp(EmpVO emp);
+	
+	void deleteEmp(EmpVO emp);
 
 }

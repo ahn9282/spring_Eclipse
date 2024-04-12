@@ -42,7 +42,7 @@ public class EmpRepositoryImpl implements EmpRepository {
 				String ename = rs.getString("ename");
 				String job = rs.getString("job");
 				String mgr = rs.getString("mgr");
-				Timestamp hiredate = rs.getTimestamp("hiredate");
+				String hiredate = rs.getString("hiredate");
 				int sal = rs.getInt("sal");
 				String comm = rs.getString("comm");
 				int deptno = rs.getInt("deptno");

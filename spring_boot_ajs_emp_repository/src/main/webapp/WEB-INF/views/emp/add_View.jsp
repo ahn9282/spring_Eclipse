@@ -14,6 +14,7 @@
 	사원 이름 : <input type="text" name="ename"><br>
 	직업  : <input type="text" name="job"><br>
 	매니저  : <input type="text" name="mgr"><br>
+	입사 일자  : <input type="date" name="hiredate"><br>
 	월급  : <input type="text" name="sal"><br>
 	커미션  : <input type="text" name="comm"><br>
 	부선 번호 : <select  name="deptno">

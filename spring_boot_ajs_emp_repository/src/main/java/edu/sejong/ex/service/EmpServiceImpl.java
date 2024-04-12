@@ -7,6 +7,7 @@ import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import edu.sejong.ex.mapper.EmpMapper;
 import edu.sejong.ex.repository.DeptRepository;
 import edu.sejong.ex.repository.EmpRepository;
 import edu.sejong.ex.vo.DeptVO;
@@ -17,24 +18,23 @@ import lombok.extern.slf4j.Slf4j;
 public class EmpServiceImpl implements EmpService {
 	
 	@Autowired
-	EmpRepository empRepository;
+	EmpMapper empMapper;
 
 	@Override
-	public List<EmpVO> getList() {
-		List<EmpVO> empList = empRepository.showList();
-		return empList;
+	public List<EmpVO> empList() {
+		List<EmpVO> list = empMapper.empList();
+		return list;
 	}
 
 	@Override
-	public void addEmp(EmpVO emp) {
-		
-		empRepository.insertEmp(emp);
+	public void insertEmp(EmpVO emp) {
+		empMapper.insertEmp(emp);
 		
 	}
 
 	@Override
-	public void removeEmp(EmpVO emp) {
-		empRepository.removeEmp(emp);
+	public void deleteEmp(EmpVO emp) {
+		empMapper.deleteEmp(emp);
 	}
 
 	

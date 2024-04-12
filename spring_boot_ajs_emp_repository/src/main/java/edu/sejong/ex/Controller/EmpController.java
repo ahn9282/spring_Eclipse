@@ -20,31 +20,29 @@ public class EmpController {
 	
 	@RequestMapping("/list")
 	public String empList(Model model) {
-		List<EmpVO> empList = empService.getList();
-		model.addAttribute("emps",empList);
-		
+	
+		List<EmpVO> emps = empService.empList();
+		model.addAttribute("emps",emps);
 		return "/emp/list";
 	}
 	
 	@GetMapping("/add")
 	public String addView() {
+		
 		return "/emp/add_View";
 	}
 	
 	
 	@PostMapping("/add")
 	public String addEmp(EmpVO emp) {
-		System.out.println(emp);
+		empService.insertEmp(emp);
 		
-		empService.addEmp(emp);
 		return"redirect:/emp/list";
 	}
 	
 	@GetMapping("/remove")
 	public String remove(EmpVO emp) {
-		System.out.println(emp);
-		
-		empService.removeEmp(emp);
+		empService.deleteEmp(emp);
 		return"redirect:/emp/list";
 	}
 	

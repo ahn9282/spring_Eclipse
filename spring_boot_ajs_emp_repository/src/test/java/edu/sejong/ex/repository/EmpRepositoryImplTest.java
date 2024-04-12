@@ -16,7 +16,7 @@ class EmpRepositoryImplTest {
 	@Autowired
 	EmpRepository eRepo = new EmpRepositoryImpl();
 	Timestamp t = new Timestamp(0);
-	EmpVO emp = new EmpVO(1,"1","1","1",t ,1,"1",1);
+	EmpVO emp = new EmpVO();
 	
 	@Test
 	void empRepositoryTest() {
