@@ -12,7 +12,7 @@ public interface TimeMapper {
 	@Select("SELECT sysdate FROM dual")
 	public String getTime();
 	
-	//public String getTime2();
+	public String getTime2();
 	@Select("SELECT * FROM emp")
 	public List<EmpVO> empList();
 }

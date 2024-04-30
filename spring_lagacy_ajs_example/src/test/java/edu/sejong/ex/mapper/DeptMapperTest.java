@@ -1,35 +1,31 @@
 package edu.sejong.ex.mapper;
 
+import static org.junit.Assert.*;
+
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import lombok.extern.log4j.Log4j;
+import edu.sejong.ex.vo.DeptVO;
 
-@RunWith(SpringJUnit4ClassRunner.class)
+
 @ContextConfiguration("file:src/main/webapp/WEB-INF/spring/root-context.xml")
-@Log4j
-public class TimeMapperTest {
+@RunWith(SpringJUnit4ClassRunner.class)
+public class DeptMapperTest {
+
 	
 	@Autowired
-	private TimeMapper timeMapper;
-	
+	DeptMapper DeptMapper;
 	@Test
-	public void testGetTime2() {
-		log.info("getTime2");
-	}
-	
-	
-	/*
-	 * @Test public void testGetTime3() {
-	 * 
-	 * System.out.println(timeMapper.getTime()); }
-	 */
-	@Test
-	public void testGetTime4() {
+	public void testDeptMapper() {
+		assertNotNull(DeptMapper);
 		
-		System.out.println(timeMapper.getTime2());
+		for(DeptVO vo : DeptMapper.getDeptList()) {
+				System.out.println("vo = " + vo);
+		}
 	}
+
 }
