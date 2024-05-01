@@ -20,12 +20,12 @@ public class DeptController {
 	
 	@Autowired
 	DeptService deptService;
-	
 	@GetMapping("/dept")
 	public String deptList(Model model) {
 		
 		List<DeptVO> list = deptService.getDeptList();
 		model.addAttribute("emps", list);
+
 		return "deptList";
 	}
 
