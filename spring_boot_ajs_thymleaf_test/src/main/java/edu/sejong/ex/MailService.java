@@ -24,4 +24,6 @@ public class MailService {
 
         javaMailSender.send(message);
     }
+
+
 }
